@@ -1,4 +1,26 @@
 Churchmanager::Application.routes.draw do
+  resources :prayer_requests
+
+  resources :category_events
+
+  resources :everyday_events
+
+  resources :treatments
+
+  resources :messages
+
+  resources :worships
+
+  resources :member_contacts
+
+  resources :chruches
+
+  resources :ministerial_roles
+
+  resources :departaments
+
+  resources :members
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
