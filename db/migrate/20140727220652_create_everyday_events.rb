@@ -3,7 +3,7 @@ class CreateEverydayEvents < ActiveRecord::Migration
     create_table :everyday_events do |t|
       t.string :name
       t.time :schedule
-      t.int :day
+      t.integer :day
       t.string :repetition
       t.references :category_event, index: true
 
