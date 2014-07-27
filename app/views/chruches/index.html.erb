@@ -1,0 +1,43 @@
+<h1>Listing chruches</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Address</th>
+      <th>Neighborhood</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Country</th>
+      <th>Zip code</th>
+      <th>Member</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @chruches.each do |chruch| %>
+      <tr>
+        <td><%= chruch.name %></td>
+        <td><%= chruch.phone %></td>
+        <td><%= chruch.address %></td>
+        <td><%= chruch.neighborhood %></td>
+        <td><%= chruch.city %></td>
+        <td><%= chruch.state %></td>
+        <td><%= chruch.country %></td>
+        <td><%= chruch.zip_code %></td>
+        <td><%= chruch.member %></td>
+        <td><%= link_to 'Show', chruch %></td>
+        <td><%= link_to 'Edit', edit_chruch_path(chruch) %></td>
+        <td><%= link_to 'Destroy', chruch, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Chruch', new_chruch_path %>

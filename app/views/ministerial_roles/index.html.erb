@@ -1,0 +1,27 @@
+<h1>Listing ministerial_roles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ministerial_roles.each do |ministerial_role| %>
+      <tr>
+        <td><%= ministerial_role.name %></td>
+        <td><%= link_to 'Show', ministerial_role %></td>
+        <td><%= link_to 'Edit', edit_ministerial_role_path(ministerial_role) %></td>
+        <td><%= link_to 'Destroy', ministerial_role, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ministerial role', new_ministerial_role_path %>

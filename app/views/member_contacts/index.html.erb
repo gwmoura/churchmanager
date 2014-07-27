@@ -1,0 +1,33 @@
+<h1>Listing member_contacts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Member</th>
+      <th>Contact name</th>
+      <th>Contact number</th>
+      <th>Degree kinship</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @member_contacts.each do |member_contact| %>
+      <tr>
+        <td><%= member_contact.member %></td>
+        <td><%= member_contact.contact_name %></td>
+        <td><%= member_contact.contact_number %></td>
+        <td><%= member_contact.degree_kinship %></td>
+        <td><%= link_to 'Show', member_contact %></td>
+        <td><%= link_to 'Edit', edit_member_contact_path(member_contact) %></td>
+        <td><%= link_to 'Destroy', member_contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Member contact', new_member_contact_path %>

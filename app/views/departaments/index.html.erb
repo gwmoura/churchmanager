@@ -1,0 +1,31 @@
+<h1>Listing departaments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Member</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @departaments.each do |departament| %>
+      <tr>
+        <td><%= departament.name %></td>
+        <td><%= departament.description %></td>
+        <td><%= departament.member %></td>
+        <td><%= link_to 'Show', departament %></td>
+        <td><%= link_to 'Edit', edit_departament_path(departament) %></td>
+        <td><%= link_to 'Destroy', departament, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Departament', new_departament_path %>

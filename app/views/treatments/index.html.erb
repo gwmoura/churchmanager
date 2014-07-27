@@ -1,0 +1,31 @@
+<h1>Listing treatments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Member</th>
+      <th>Description</th>
+      <th>Pastor</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @treatments.each do |treatment| %>
+      <tr>
+        <td><%= treatment.member %></td>
+        <td><%= treatment.description %></td>
+        <td><%= treatment.pastor %></td>
+        <td><%= link_to 'Show', treatment %></td>
+        <td><%= link_to 'Edit', edit_treatment_path(treatment) %></td>
+        <td><%= link_to 'Destroy', treatment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Treatment', new_treatment_path %>

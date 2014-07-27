@@ -1,0 +1,35 @@
+<h1>Listing everyday_events</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Schedule</th>
+      <th>Day</th>
+      <th>Repetition</th>
+      <th>Category event</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @everyday_events.each do |everyday_event| %>
+      <tr>
+        <td><%= everyday_event.name %></td>
+        <td><%= everyday_event.schedule %></td>
+        <td><%= everyday_event.day %></td>
+        <td><%= everyday_event.repetition %></td>
+        <td><%= everyday_event.category_event %></td>
+        <td><%= link_to 'Show', everyday_event %></td>
+        <td><%= link_to 'Edit', edit_everyday_event_path(everyday_event) %></td>
+        <td><%= link_to 'Destroy', everyday_event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Everyday event', new_everyday_event_path %>

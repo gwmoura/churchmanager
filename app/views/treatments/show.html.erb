@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Member:</strong>
+  <%= @treatment.member %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @treatment.description %>
+</p>
+
+<p>
+  <strong>Pastor:</strong>
+  <%= @treatment.pastor %>
+</p>
+
+<%= link_to 'Edit', edit_treatment_path(@treatment) %> |
+<%= link_to 'Back', treatments_path %>

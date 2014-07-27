@@ -1,0 +1,31 @@
+<h1>Listing worships</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Weekday</th>
+      <th>Schedule</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @worships.each do |worship| %>
+      <tr>
+        <td><%= worship.name %></td>
+        <td><%= worship.weekday %></td>
+        <td><%= worship.schedule %></td>
+        <td><%= link_to 'Show', worship %></td>
+        <td><%= link_to 'Edit', edit_worship_path(worship) %></td>
+        <td><%= link_to 'Destroy', worship, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Worship', new_worship_path %>

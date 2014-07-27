@@ -1,0 +1,2 @@
+module MinisterialRolesHelper
+end

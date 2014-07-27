@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @chruch.name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @chruch.phone %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @chruch.address %>
+</p>
+
+<p>
+  <strong>Neighborhood:</strong>
+  <%= @chruch.neighborhood %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @chruch.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @chruch.state %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @chruch.country %>
+</p>
+
+<p>
+  <strong>Zip code:</strong>
+  <%= @chruch.zip_code %>
+</p>
+
+<p>
+  <strong>Member:</strong>
+  <%= @chruch.member %>
+</p>
+
+<%= link_to 'Edit', edit_chruch_path(@chruch) %> |
+<%= link_to 'Back', chruches_path %>

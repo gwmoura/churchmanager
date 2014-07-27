@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @everyday_event.name %>
+</p>
+
+<p>
+  <strong>Schedule:</strong>
+  <%= @everyday_event.schedule %>
+</p>
+
+<p>
+  <strong>Day:</strong>
+  <%= @everyday_event.day %>
+</p>
+
+<p>
+  <strong>Repetition:</strong>
+  <%= @everyday_event.repetition %>
+</p>
+
+<p>
+  <strong>Category event:</strong>
+  <%= @everyday_event.category_event %>
+</p>
+
+<%= link_to 'Edit', edit_everyday_event_path(@everyday_event) %> |
+<%= link_to 'Back', everyday_events_path %>

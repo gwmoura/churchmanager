@@ -1,0 +1,35 @@
+<h1>Listing prayer_requests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Request</th>
+      <th>Member</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @prayer_requests.each do |prayer_request| %>
+      <tr>
+        <td><%= prayer_request.name %></td>
+        <td><%= prayer_request.email %></td>
+        <td><%= prayer_request.phone %></td>
+        <td><%= prayer_request.request %></td>
+        <td><%= prayer_request.member %></td>
+        <td><%= link_to 'Show', prayer_request %></td>
+        <td><%= link_to 'Edit', edit_prayer_request_path(prayer_request) %></td>
+        <td><%= link_to 'Destroy', prayer_request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Prayer request', new_prayer_request_path %>

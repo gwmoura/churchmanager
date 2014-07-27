@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @worship.name %>
+</p>
+
+<p>
+  <strong>Weekday:</strong>
+  <%= @worship.weekday %>
+</p>
+
+<p>
+  <strong>Schedule:</strong>
+  <%= @worship.schedule %>
+</p>
+
+<%= link_to 'Edit', edit_worship_path(@worship) %> |
+<%= link_to 'Back', worships_path %>

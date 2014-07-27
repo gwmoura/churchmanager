@@ -1,0 +1,29 @@
+<%= form_for(@worship) do |f| %>
+  <% if @worship.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@worship.errors.count, "error") %> prohibited this worship from being saved:</h2>
+
+      <ul>
+      <% @worship.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :weekday %><br>
+    <%= f.text_field :weekday %>
+  </div>
+  <div class="field">
+    <%= f.label :schedule %><br>
+    <%= f.time_select :schedule %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
