@@ -3,7 +3,7 @@ class CreateTreatments < ActiveRecord::Migration
     create_table :treatments do |t|
       t.references :member, index: true
       t.text :description
-      t.int :pastor
+      t.integer :pastor
 
       t.timestamps
     end
