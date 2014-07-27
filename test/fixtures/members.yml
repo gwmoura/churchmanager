@@ -1,0 +1,69 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  birth_date: 2014-07-27
+  sex: 
+  address: MyString
+  neighborhood: MyString
+  city: MyString
+  state: MyString
+  country: MyString
+  zip-code: MyString
+  home_phone: MyString
+  mobile_phone: MyString
+  work_phone: MyString
+  email: MyString
+  blood_type: MyString
+  marital_status: 
+  congregating: 
+  photo: MyString
+  withdrawl_date: 2014-07-27
+  departament_id: 
+  skills: MyString
+  worship_date: 2014-07-27
+  situation: 
+  profession: MyString
+  education: MyString
+  baptism_date: 2014-07-27
+  wedding_date: 2014-07-27
+  ministerial_role_id: 
+  facebook: MyString
+  twitter: MyString
+  instagram: MyString
+  whatsapp: MyString
+  church_id: 
+
+two:
+  name: MyString
+  birth_date: 2014-07-27
+  sex: 
+  address: MyString
+  neighborhood: MyString
+  city: MyString
+  state: MyString
+  country: MyString
+  zip-code: MyString
+  home_phone: MyString
+  mobile_phone: MyString
+  work_phone: MyString
+  email: MyString
+  blood_type: MyString
+  marital_status: 
+  congregating: 
+  photo: MyString
+  withdrawl_date: 2014-07-27
+  departament_id: 
+  skills: MyString
+  worship_date: 2014-07-27
+  situation: 
+  profession: MyString
+  education: MyString
+  baptism_date: 2014-07-27
+  wedding_date: 2014-07-27
+  ministerial_role_id: 
+  facebook: MyString
+  twitter: MyString
+  instagram: MyString
+  whatsapp: MyString
+  church_id: 

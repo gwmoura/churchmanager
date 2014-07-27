@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  schedule: 2014-07-27 19:06:52
+  day: 
+  repetition: MyString
+  category_event_id: 
+
+two:
+  name: MyString
+  schedule: 2014-07-27 19:06:52
+  day: 
+  repetition: MyString
+  category_event_id: 

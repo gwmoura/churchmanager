@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2014-07-27
+  schedule: 2014-07-27 18:48:09
+  message_text: MyText
+
+two:
+  date: 2014-07-27
+  schedule: 2014-07-27 18:48:09
+  message_text: MyText

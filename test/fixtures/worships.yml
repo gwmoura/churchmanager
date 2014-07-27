@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  weekday: 
+  schedule: 2014-07-27 18:45:14
+
+two:
+  name: MyString
+  weekday: 
+  schedule: 2014-07-27 18:45:14
