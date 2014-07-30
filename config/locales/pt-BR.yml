@@ -23,3 +23,5 @@ pt-BR:
   hello: "Olá Mundo"
   logout: "Sair"
   login:  "Entrar"
+  yes: "Sim"
+  no: "Não"
