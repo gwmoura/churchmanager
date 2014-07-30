@@ -85,7 +85,7 @@
   </div>
   <div class="field">
     <%= f.label :departament_id %><br>
-    <%= f.select :departament_id,{} %>
+    <%= f.select :departament_id, @departaments.collect { |c| [c.name,c.id] } %>
   </div>
   <div class="field">
     <%= f.label :skills %><br>
@@ -117,7 +117,7 @@
   </div>
   <div class="field">
     <%= f.label :ministerial_role_id %><br>
-    <%= f.select :ministerial_role_id, {} %>
+    <%= f.select :ministerial_role_id, @ministerial_roles.collect { |mr| [mr.name,mr.id] } %>
   </div>
   <div class="field">
     <%= f.label :facebook %><br>
@@ -137,7 +137,7 @@
   </div>
   <div class="field">
     <%= f.label :church_id %><br>
-    <%= f.select :church_id, {} %>
+    <%= f.select :church_id, @churchs.collect { |c| [c.name,c.id] } %>
   </div>
   <div class="actions">
     <%= f.submit %>
