@@ -7,6 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<%= link_to 'Home', '/' %>
 <% if user_signed_in? %>
  Olá <%= current_user.member.nil? ? 'Admin' : current_user.member.name %>, <%= link_to t('logout'), destroy_user_session_path, method: :delete %>
 <% else %>
@@ -14,7 +15,7 @@
 <% end %>
 <div>
   <% if user_signed_in? %>
-    <%= link_to 'Members', members_path %>
+    <%= link_to t('members'), members_path %>
   <% end %>
 </div>
 <p class="notice"><%= notice %></p>
