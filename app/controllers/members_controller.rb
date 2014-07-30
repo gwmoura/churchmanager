@@ -16,10 +16,16 @@ class MembersController < ApplicationController
   # GET /members/new
   def new
     @member = Member.new
+    @departaments = Departament.all
+    @ministerial_roles = MinisterialRole.all
+    @churchs = Church.all
   end
 
   # GET /members/1/edit
   def edit
+    @departaments = Departament.all
+    @ministerial_roles = MinisterialRole.all
+    @churchs = Church.all
   end
 
   # POST /members
