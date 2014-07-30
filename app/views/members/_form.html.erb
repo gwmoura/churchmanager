@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :sex %><br>
-    <%= f.select :sex, {t('female') => 0, t('male') => 1 } %>
+    <%= f.select :sex, {t('sex.female') => 0, t('sex.male') => 1 } %>
   </div>
   <div class="field">
     <%= f.label :address %><br>
@@ -49,47 +49,47 @@
   </div>
   <div class="field">
     <%= f.label :home_phone %><br>
-    <%= f.text_field :home_phone %>
+    <%= f.phone_field :home_phone %>
   </div>
   <div class="field">
     <%= f.label :mobile_phone %><br>
-    <%= f.text_field :mobile_phone %>
+    <%= f.phone_field :mobile_phone %>
   </div>
   <div class="field">
     <%= f.label :work_phone %><br>
-    <%= f.text_field :work_phone %>
+    <%= f.phone_field :work_phone %>
   </div>
   <div class="field">
     <%= f.label :email %><br>
-    <%= f.text_field :email %>
+    <%= f.email_field :email %>
   </div>
   <div class="field">
     <%= f.label :blood_type %><br>
-    <%= f.text_field :blood_type %>
+    <%= f.select :blood_type, ['A+','A-','AB+','AB-','B+','B-','O+','O-'] %>
   </div>
   <div class="field">
     <%= f.label :marital_status %><br>
-    <%= f.text_field :marital_status %>
+    <%= f.select :marital_status, {t('marital_status.single') => 0, t('marital_status.maried') => 1, t('marital_status.widowed') =>2 } %>
   </div>
   <div class="field">
     <%= f.label :congregating %><br>
-    <%= f.text_field :congregating %>
+    <%= f.select :congregating, {t('yes') => 1, t('no') => 0} %>
   </div>
   <div class="field">
     <%= f.label :photo %><br>
-    <%= f.text_field :photo %>
+    <%= f.file_field :photo %>
   </div>
   <div class="field">
     <%= f.label :withdrawl_date %><br>
-    <%= f.date_select :withdrawl_date %>
+    <%= f.date_select :withdrawl_date, {:start_year => Time.now.year - 100} %>
   </div>
   <div class="field">
     <%= f.label :departament_id %><br>
-    <%= f.text_field :departament_id %>
+    <%= f.select :departament_id,{} %>
   </div>
   <div class="field">
     <%= f.label :skills %><br>
-    <%= f.text_field :skills %>
+    <%= f.text_field :skills, :placeholder =>  t('skills_examples') %>
   </div>
   <div class="field">
     <%= f.label :worship_date %><br>
@@ -97,7 +97,7 @@
   </div>
   <div class="field">
     <%= f.label :situation %><br>
-    <%= f.text_field :situation %>
+    <%= f.select :situation,{t('situation.new_decided') => 0, t('situation.reconciliation') => 1,t('situation.visiting') => 2, t('situation.acclaim') => 3 } %>
   </div>
   <div class="field">
     <%= f.label :profession %><br>
@@ -117,7 +117,7 @@
   </div>
   <div class="field">
     <%= f.label :ministerial_role_id %><br>
-    <%= f.text_field :ministerial_role_id %>
+    <%= f.select :ministerial_role_id, {} %>
   </div>
   <div class="field">
     <%= f.label :facebook %><br>
@@ -137,7 +137,7 @@
   </div>
   <div class="field">
     <%= f.label :church_id %><br>
-    <%= f.text_field :church_id %>
+    <%= f.select :church_id, {} %>
   </div>
   <div class="actions">
     <%= f.submit %>
