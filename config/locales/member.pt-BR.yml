@@ -1,0 +1,17 @@
+pt-BR:
+  members: "Membros"
+  sex:
+    label: "Sexo"
+    male: "Masculino"
+    female: "Feminino"
+  marital_status:
+    label: "Estado Civil"
+    single: "Solteiro"
+    maried: "Casado"
+    widowed: "Viúvo"
+  skills_examples: "encanador, cantor, artista plástico, cozinheira"
+  situation:
+    new_decided: "Novo Decidido"
+    reconciliation: "Reconciliação"
+    visiting: "Visitando"
+    acclaim: "Aclamação"
