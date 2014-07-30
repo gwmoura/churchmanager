@@ -23,3 +23,5 @@ en:
   hello: "Hello world"
   logout: "Logout"
   login:  "Login"
+  yes: "Yes"
+  no: "No"
