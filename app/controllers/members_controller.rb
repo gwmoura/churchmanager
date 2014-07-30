@@ -18,14 +18,14 @@ class MembersController < ApplicationController
     @member = Member.new
     @departaments = Departament.all
     @ministerial_roles = MinisterialRole.all
-    @churchs = Church.all
+    @churchs = Chruch.all
   end
 
   # GET /members/1/edit
   def edit
     @departaments = Departament.all
     @ministerial_roles = MinisterialRole.all
-    @churchs = Church.all
+    @churchs = Chruch.all
   end
 
   # POST /members
