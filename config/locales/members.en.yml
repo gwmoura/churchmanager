@@ -1,0 +1,10 @@
+en:
+  members: "Members"
+  sex:
+    male: "Man"
+    female: "Woman"
+  marital_status:
+    single: "Single"
+    maried: "Maried"
+    widowed: "Widowed"
+  skills_examples: "photografer, singeer, english teacher"
