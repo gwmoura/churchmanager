@@ -1,4 +1,5 @@
 class ChruchesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_chruch, only: [:show, :edit, :update, :destroy]
 
   # GET /chruches

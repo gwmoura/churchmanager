@@ -1,4 +1,5 @@
 class WorshipsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_worship, only: [:show, :edit, :update, :destroy]
 
   # GET /worships

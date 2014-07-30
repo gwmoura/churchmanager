@@ -1,4 +1,5 @@
 class EverydayEventsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_everyday_event, only: [:show, :edit, :update, :destroy]
 
   # GET /everyday_events

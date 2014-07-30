@@ -1,4 +1,5 @@
 class MemberContactsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_member_contact, only: [:show, :edit, :update, :destroy]
 
   # GET /member_contacts

@@ -1,4 +1,5 @@
 class PrayerRequestsController < ApplicationController
+  before_action :authenticate_user!, except: [:create,:new]
   before_action :set_prayer_request, only: [:show, :edit, :update, :destroy]
 
   # GET /prayer_requests

@@ -1,4 +1,5 @@
 class MinisterialRolesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_ministerial_role, only: [:show, :edit, :update, :destroy]
 
   # GET /ministerial_roles
