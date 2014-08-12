@@ -21,7 +21,7 @@
   </div>
   <div class="form-group">
     <%= f.label :sex %><br>
-    <%= f.select :sex, {t('sex.female') => 0, t('sex.male') => 1 } %>
+    <%= f.select :sex, {t('sex.female') => 0, t('sex.male') => 1 },{},{:class=>"form-control"} %>
   </div>
   <div class="form-group">
     <%= f.label :address %><br>
@@ -40,8 +40,8 @@
     <%= f.text_field :state, :class=>"form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label :country %><br>
-    <%= f.select :country, :class=>"form-control" %>
+    <%= f.label :country %><br/>
+    <%= f.country_select :country,{priority_countries: ["BR"], prompt: :select_country},{:class=>"form-control"} %>
   </div>
   <div class="form-group">
     <%= f.label :zip_code %><br>
