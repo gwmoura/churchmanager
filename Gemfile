@@ -35,6 +35,7 @@ end
 gem 'cancan'
 gem 'devise'
 gem 'simple_form'
+gem 'country_select', github: 'stefanpenner/country_select'
 gem 'cocoon'
 gem 'coveralls', require: false
 
