@@ -9,7 +9,7 @@ one:
   city: MyString
   state: MyString
   country: MyString
-  zip-code: MyString
+  zip_code: MyString
   home_phone: MyString
   mobile_phone: MyString
   work_phone: MyString
@@ -43,7 +43,7 @@ two:
   city: MyString
   state: MyString
   country: MyString
-  zip-code: MyString
+  zip_code: MyString
   home_phone: MyString
   mobile_phone: MyString
   work_phone: MyString
