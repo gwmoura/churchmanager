@@ -20,8 +20,24 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 pt-BR:
+  members: 'Membros'
+  churchs: 'Igrejas'
+  church: "Igreja"
   hello: "Olá Mundo"
   logout: "Sair"
   login:  "Entrar"
   yes: "Sim"
   no: "Não"
+#general words
+  name: "Nome"
+  home_phone: "Telefone de Casa"
+  mobile_phone: "Celular"
+  work_phone: "Telefone do Trabalho"
+  remove_item: 'Remover Item'
+  add: 'Add'
+  contacts: 'Contatos'
+  contact: 'contato'
+  address: 'Endereço'
+#churchs
+  new_chruch: 'Nova Igreja'
+  listing_chruches: 'Listando Igrejas'
