@@ -3,15 +3,15 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Phone</th>
-      <th>Address</th>
-      <th>Neighborhood</th>
-      <th>City</th>
-      <th>State</th>
-      <th>Country</th>
-      <th>Zip code</th>
-      <th>Member</th>
+      <th><%= t('name') %></th>
+      <th><%= t('phone') %></th>
+      <th><%= t('address') %></th>
+      <th><%= t('neighborhood') %></th>
+      <th><%= t('city') %></th>
+      <th><%= t('state') %></th>
+      <th><%= t('country') %></th>
+      <th><%= t('zip_code') %></th>
+      <th><%= t('pastor') %></th>
       <th></th>
       <th></th>
       <th></th>
@@ -30,9 +30,9 @@
         <td><%= chruch.country %></td>
         <td><%= chruch.zip_code %></td>
         <td><%= chruch.member %></td>
-        <td><%= link_to 'Show', chruch %></td>
-        <td><%= link_to 'Edit', edit_chruch_path(chruch) %></td>
-        <td><%= link_to 'Destroy', chruch, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('show'), chruch %></td>
+        <td><%= link_to t('edit'), edit_chruch_path(chruch) %></td>
+        <td><%= link_to t('destroy'), chruch, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -40,4 +40,4 @@
 
 <br>
 
-<%= link_to 'New Chruch', new_chruch_path %>
+<%= link_to t('new_chruch'), new_chruch_path, :class=>"btn btn-primary" %>
