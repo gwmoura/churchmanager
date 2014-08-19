@@ -5,4 +5,5 @@ class Member < ActiveRecord::Base
 
   has_many :member_contacts
   accepts_nested_attributes_for :member_contacts, :allow_destroy => true
+  validates_presence_of :church_id, :name
 end
