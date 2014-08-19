@@ -1,40 +1,14 @@
-<h1>Listing members</h1>
+<h1><%= t('listing_members') %></h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Birth date</th>
-      <th>Sex</th>
-      <th>Address</th>
-      <th>Neighborhood</th>
-      <th>City</th>
-      <th>State</th>
-      <th>Country</th>
-      <th>Zip-code</th>
-      <th>Home phone</th>
-      <th>Mobile phone</th>
-      <th>Work phone</th>
-      <th>Email</th>
-      <th>Blood type</th>
-      <th>Marital status</th>
-      <th>Congregating</th>
-      <th>Photo</th>
-      <th>Withdrawl date</th>
-      <th>Departament</th>
-      <th>Skills</th>
-      <th>Worship date</th>
-      <th>Situation</th>
-      <th>Profession</th>
-      <th>Education</th>
-      <th>Baptism date</th>
-      <th>Wedding date</th>
-      <th>Ministerial role</th>
-      <th>Facebook</th>
-      <th>Twitter</th>
-      <th>Instagram</th>
-      <th>Whatsapp</th>
-      <th>Church</th>
+      <th><%= t('name') %></th>
+      <th><%= t('home_phone') %></th>
+      <th><%= t('mobile_phone') %></th>
+      <th><%= t('work_phone') %></th>
+      <th><%= t('email') %></th>
+      <th><%= t('church') %></th>
       <th></th>
       <th></th>
       <th></th>
@@ -45,40 +19,14 @@
     <% @members.each do |member| %>
       <tr>
         <td><%= member.name %></td>
-        <td><%= member.birth_date %></td>
-        <td><%= member.sex %></td>
-        <td><%= member.address %></td>
-        <td><%= member.neighborhood %></td>
-        <td><%= member.city %></td>
-        <td><%= member.state %></td>
-        <td><%= member.country %></td>
-        <td><%= member.zip-code %></td>
         <td><%= member.home_phone %></td>
         <td><%= member.mobile_phone %></td>
         <td><%= member.work_phone %></td>
         <td><%= member.email %></td>
-        <td><%= member.blood_type %></td>
-        <td><%= member.marital_status %></td>
-        <td><%= member.congregating %></td>
-        <td><%= member.photo %></td>
-        <td><%= member.withdrawl_date %></td>
-        <td><%= member.departament %></td>
-        <td><%= member.skills %></td>
-        <td><%= member.worship_date %></td>
-        <td><%= member.situation %></td>
-        <td><%= member.profession %></td>
-        <td><%= member.education %></td>
-        <td><%= member.baptism_date %></td>
-        <td><%= member.wedding_date %></td>
-        <td><%= member.ministerial_role %></td>
-        <td><%= member.facebook %></td>
-        <td><%= member.twitter %></td>
-        <td><%= member.instagram %></td>
-        <td><%= member.whatsapp %></td>
         <td><%= member.church %></td>
-        <td><%= link_to 'Show', member %></td>
-        <td><%= link_to 'Edit', edit_member_path(member) %></td>
-        <td><%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('show'), member %></td>
+        <td><%= link_to t('edit'), edit_member_path(member) %></td>
+        <td><%= link_to t('destroy'), member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -86,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Member', new_member_path %>
+<%= link_to t('new_member'), new_member_path, :class=>"btn btn-primary" %>
