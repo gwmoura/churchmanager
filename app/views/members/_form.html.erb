@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :name %><br>
+    <%= f.label :name  %><br>
     <%= f.text_field :name, :class=>"form-control" %>
   </div>
   <div class="form-group">
@@ -144,7 +144,7 @@
     <%= f.simple_fields_for :member_contacts do |contact| %>
       <%= render "member_contact_fields", :f => contact %>
     <% end %>
-    <%= link_to_add_association 'Add Contact', f, :member_contacts, :class => 'btn btn-default'  %>
+    <%= link_to_add_association t('add')+' '+t('contact'), f, :member_contacts, :class => 'btn btn-default'  %>
   </div>
   <div class="actions">
     <br/>
