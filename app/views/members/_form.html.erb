@@ -144,9 +144,9 @@
     <%= f.simple_fields_for :member_contacts do |contact| %>
       <%= render "member_contact_fields", :f => contact %>
     <% end %>
+    <%= link_to_add_association 'Add Contact', f, :member_contacts, :class => 'btn btn-default'  %>
   </div>
   <div class="actions">
-    <%= link_to_add_association 'add contact', f, :member_contacts, :class => 'btn btn-default'  %>
     <br/>
     <%= f.button :submit %>
   </div>
