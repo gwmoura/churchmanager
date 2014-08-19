@@ -1,5 +1,6 @@
 pt-BR:
-  members: "Membros"
+  listing_members: "Listando Membros"
+  new_member: "Novo Membro"
   sex:
     label: "Sexo"
     male: "Masculino"
