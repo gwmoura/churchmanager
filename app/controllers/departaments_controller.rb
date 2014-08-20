@@ -16,10 +16,12 @@ class DepartamentsController < ApplicationController
   # GET /departaments/new
   def new
     @departament = Departament.new
+    @members = Member.all
   end
 
   # GET /departaments/1/edit
   def edit
+    @members = Member.all
   end
 
   # POST /departaments
