@@ -44,6 +44,12 @@ pt-BR:
          contact_name: 'Nome do contato'
          contact_number: 'Número do contato'
          degree_kinship: 'Grau de parentesco'
+       departament:
+         name: 'Nome'
+         description: 'Descrição'
+         member_id: 'Membro responsável'
+       ministerial_role:
+         name: 'Nome'
        defaults:
          password: 'Password'
        user:
