@@ -28,6 +28,10 @@ pt-BR:
   login:  "Entrar"
   yes: "Sim"
   no: "Não"
+  new: 'Novo'
+  listing: 'Listando'
+  description: 'Descrição'
+  member: 'Membro'
 #general words
   name: "Nome"
   home_phone: "Telefone de Casa"
@@ -41,3 +45,9 @@ pt-BR:
 #churchs
   new_chruch: 'Nova Igreja'
   listing_chruches: 'Listando Igrejas'
+#departments
+  department: 'departamento'
+  departments: 'Departamentos'
+#ministerial_roles
+  ministerial_roles: 'Cargos Ministeriais'
+  ministerial_role: 'Cargo Ministerial'
