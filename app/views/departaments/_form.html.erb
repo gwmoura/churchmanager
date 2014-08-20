@@ -1,4 +1,4 @@
-<%= form_for(@departament) do |f| %>
+<%= simple_form_for(@departament) do |f| %>
   <% if @departament.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@departament.errors.count, "error") %> prohibited this departament from being saved:</h2>
@@ -11,19 +11,19 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :class=>"form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :description %><br>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, :class=>"form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :member_id %><br>
-    <%= f.text_field :member_id %>
+    <%= f.select :member_id, @members.collect{ |m| [m.name,m.id]},{},{:class=>"form-control"} %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.button :submit %>
   </div>
 <% end %>
