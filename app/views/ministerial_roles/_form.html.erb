@@ -1,4 +1,4 @@
-<%= form_for(@ministerial_role) do |f| %>
+<%= simple_form_for(@ministerial_role) do |f| %>
   <% if @ministerial_role.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@ministerial_role.errors.count, "error") %> prohibited this ministerial_role from being saved:</h2>
@@ -11,11 +11,11 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :class=>"form-control" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.button :submit %>
   </div>
 <% end %>
