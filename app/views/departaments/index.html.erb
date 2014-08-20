@@ -1,11 +1,11 @@
-<h1>Listing departaments</h1>
+<h1><%= t('listing') %>  <%= t('departaments') %></h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Member</th>
+      <th><%= t('name') %></th>
+      <th><%= t('description') %></th>
+      <th><%= t('member') %></th>
       <th></th>
       <th></th>
       <th></th>
@@ -18,9 +18,9 @@
         <td><%= departament.name %></td>
         <td><%= departament.description %></td>
         <td><%= departament.member %></td>
-        <td><%= link_to 'Show', departament %></td>
-        <td><%= link_to 'Edit', edit_departament_path(departament) %></td>
-        <td><%= link_to 'Destroy', departament, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('show'), departament %></td>
+        <td><%= link_to t('edit'), edit_departament_path(departament) %></td>
+        <td><%= link_to t('destroy'), departament, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Departament', new_departament_path %>
+<%= link_to t('new')+' '+t('department'), new_departament_path, :class=>"btn btn-primary" %>
