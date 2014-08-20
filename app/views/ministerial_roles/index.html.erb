@@ -1,9 +1,9 @@
-<h1>Listing ministerial_roles</h1>
+<h1><%= t('listing') %> <%=t('ministerial_roles') %></h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
+      <th><%= t('name') %></th>
       <th></th>
       <th></th>
       <th></th>
@@ -14,9 +14,9 @@
     <% @ministerial_roles.each do |ministerial_role| %>
       <tr>
         <td><%= ministerial_role.name %></td>
-        <td><%= link_to 'Show', ministerial_role %></td>
-        <td><%= link_to 'Edit', edit_ministerial_role_path(ministerial_role) %></td>
-        <td><%= link_to 'Destroy', ministerial_role, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('show'), ministerial_role %></td>
+        <td><%= link_to t('edit'), edit_ministerial_role_path(ministerial_role) %></td>
+        <td><%= link_to t('destroy'), ministerial_role, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Ministerial role', new_ministerial_role_path %>
+<%= link_to t('new')+' '+t('ministerial_role'), new_ministerial_role_path, :class=>"btn btn-primary" %>
