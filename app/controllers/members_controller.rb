@@ -5,7 +5,11 @@ class MembersController < ApplicationController
   # GET /members
   # GET /members.json
   def index
-    @members = Member.all
+    if params[:name].nil?
+      @members = Member.all
+    else
+      @members = Member.find_by name: params[:name] 
+    end
   end
 
   # GET /members/1
