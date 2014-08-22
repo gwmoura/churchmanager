@@ -16,3 +16,28 @@
 //= require bootstrap.min
 //= require cocoon
 //= require_tree .
+
+$(function(){
+  $("#member_name").keyup(function(){
+    member_name = $("#member_name").val();
+    //console.log(member_name,member_name.length);
+    if(member_name.length > 10){
+      $.get(
+        '/members.json',
+        {name:member_name},
+        function(data){
+          if(data.length > 0){
+            //console.log('result',data);
+            for(i=0;i<data.length;i++){
+              $("#member-exists").html('<a href="/members/'+data[i].id+'/">'+data[i].name+'</a>');
+            }
+          }else{
+            $("#member-exists").html('<b>Não retornou nada</b>');
+          }
+        },
+        "json"
+      );
+    }
+    return false;
+  });
+});
