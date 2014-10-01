@@ -23,7 +23,7 @@
         <td><%= member.mobile_phone %></td>
         <td><%= member.work_phone %></td>
         <td><%= member.email %></td>
-        <td><%= member.church %></td>
+        <td><%= member.church_id==0 ? member.church_id : member.church.name %></td>
         <td><%= link_to t('show'), member %></td>
         <td><%= link_to t('edit'), edit_member_path(member) %></td>
         <td><%= link_to t('destroy'), member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
