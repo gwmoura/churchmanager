@@ -18,12 +18,11 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Church Manager</a>
+      <a class="navbar-brand" href="/">Church Manager</a>
     </div>
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
         <% if user_signed_in? %>
-          <li><%= link_to 'Home', '/' %></li>
           <li><%= link_to t('members'), members_path %></li>
           <li><%= link_to t('churchs'), chruches_path %></li>
           <li><%= link_to t('departments'), departaments_path %></li>
@@ -40,8 +39,12 @@
     </div><!--/.nav-collapse -->
   </div>
 </div>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<% if notice %>
+<div class="alert alert-success"><%= notice %></div>
+<% end %>
+<% if alert %>
+<div class="alert alert-danger"><%= alert %></div>
+<% end %>
 <div class="container">
   <%= yield %>
 </div>
