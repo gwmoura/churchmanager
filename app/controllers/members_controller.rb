@@ -8,7 +8,7 @@ class MembersController < ApplicationController
     if params[:name].nil?
       @members = Member.all
     else
-      @members = Member.find_by name: params[:name] 
+      @members = Member.where('name LIKE ?',params[:name]+'%')  
     end
   end
 
