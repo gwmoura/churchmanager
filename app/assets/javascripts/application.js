@@ -18,6 +18,10 @@
 //= require_tree .
 
 $(function(){
+
+  $(".phone").mask('(99) 9999-9999',{placeholder: "(__) ____-____"});
+  $('.zip-code').mask('00000-000',{placeholder: "_____-___"});
+
   $("#member_name").keyup(function(){
     member_name = $("#member_name").val();
     //console.log(member_name,member_name.length);
@@ -28,15 +32,19 @@ $(function(){
         function(data){
           if(data.length > 0){
             //console.log('result',data);
+            content = '';
             for(i=0;i<data.length;i++){
-              $("#member-exists").html('<a href="/members/'+data[i].id+'/">'+data[i].name+'</a>');
+              content+='<a href="/members/'+data[i].id+'/">'+data[i].name+'</a><br/>';  
             }
+            $("#member-exists").html('<div class="alert alert-warning"><div><b>Nomes já cadastrados:</b></div>'+content+'</div>');
           }else{
-            $("#member-exists").html('<b>Não retornou nada</b>');
+            //$("#member-exists").html('<div class="alert alert-info"><b>Não há duplicidade</b></div>');
           }
         },
         "json"
       );
+    }else if(member_name.length == 0){
+      $("#member-exists").html('');
     }
     return false;
   });
