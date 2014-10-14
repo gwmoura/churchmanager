@@ -12,7 +12,7 @@
 
 <p>
   <strong>Sex:</strong>
-  <%= @member.sex %>
+  <%= t(@member.sex_name) %>
 </p>
 
 <p>
@@ -42,7 +42,7 @@
 
 <p>
   <strong>Zip-code:</strong>
-  <%= @member.zip-code %>
+  <%= @member.zip_code %>
 </p>
 
 <p>
@@ -157,8 +157,8 @@
 
 <p>
   <strong>Church:</strong>
-  <%= @member.church %>
+  <%= @member.church_id %>
 </p>
 
-<%= link_to 'Edit', edit_member_path(@member) %> |
-<%= link_to 'Back', members_path %>
+<%= link_to t('edit'), edit_member_path(@member), :class=>'btn btn-default' %>
+<%= link_to t('back'), members_path, :class=>'btn btn-default' %>
