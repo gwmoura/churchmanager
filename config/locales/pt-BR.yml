@@ -20,6 +20,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 pt-BR:
+  show: 'Detalhes'
+  destroy: 'Excluir'
+  edit: 'Editar'
+  back: 'Voltar'
   members: 'Membros'
   churchs: 'Igrejas'
   church: "Igreja"
