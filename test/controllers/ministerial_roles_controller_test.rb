@@ -2,6 +2,7 @@ require 'test_helper'
 
 class MinisterialRolesControllerTest < ActionController::TestCase
   setup do
+    sign_in :user, @user = users(:one)
     @ministerial_role = ministerial_roles(:one)
   end
 

@@ -3,6 +3,7 @@ require 'test_helper'
 class TreatmentsControllerTest < ActionController::TestCase
   setup do
     @treatment = treatments(:one)
+    sign_in :user, @user = users(:one)
   end
 
   test "should get index" do

@@ -2,6 +2,7 @@ require 'test_helper'
 
 class DepartamentsControllerTest < ActionController::TestCase
   setup do
+    sign_in :user, @user = users(:one)
     @departament = departaments(:one)
   end
 

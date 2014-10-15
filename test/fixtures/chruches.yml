@@ -9,7 +9,7 @@ one:
   state: MyString
   country: MyString
   zip_code: MyString
-  member_id: 
+  member_id: 1
 
 two:
   name: MyString
@@ -20,4 +20,4 @@ two:
   state: MyString
   country: MyString
   zip_code: MyString
-  member_id: 
+  member_id: 1

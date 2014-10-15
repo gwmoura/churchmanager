@@ -3,7 +3,7 @@
 one:
   name: MyString
   birth_date: 2014-07-27
-  sex: 
+  sex: 1
   address: MyString
   neighborhood: MyString
   city: MyString
@@ -15,14 +15,14 @@ one:
   work_phone: MyString
   email: MyString
   blood_type: MyString
-  marital_status: 
-  congregating: 
+  marital_status: 1 
+  congregating: 0 
   photo: MyString
   withdrawl_date: 2014-07-27
-  departament_id: 
+  departament_id: 0
   skills: MyString
   worship_date: 2014-07-27
-  situation: 
+  situation: 1
   profession: MyString
   education: MyString
   baptism_date: 2014-07-27
@@ -32,12 +32,12 @@ one:
   twitter: MyString
   instagram: MyString
   whatsapp: MyString
-  church_id: 
+  church_id: 0
 
 two:
   name: MyString
   birth_date: 2014-07-27
-  sex: 
+  sex: 0
   address: MyString
   neighborhood: MyString
   city: MyString
@@ -49,14 +49,14 @@ two:
   work_phone: MyString
   email: MyString
   blood_type: MyString
-  marital_status: 
-  congregating: 
+  marital_status: 1 
+  congregating: 1
   photo: MyString
   withdrawl_date: 2014-07-27
-  departament_id: 
+  departament_id: 1
   skills: MyString
   worship_date: 2014-07-27
-  situation: 
+  situation: 4
   profession: MyString
   education: MyString
   baptism_date: 2014-07-27
@@ -66,4 +66,4 @@ two:
   twitter: MyString
   instagram: MyString
   whatsapp: MyString
-  church_id: 
+  church_id: 298486374

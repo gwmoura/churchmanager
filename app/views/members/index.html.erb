@@ -23,7 +23,7 @@
         <td><%= member.mobile_phone %></td>
         <td><%= member.work_phone %></td>
         <td><%= member.email %></td>
-        <td><%= member.church_id==0 ? '-' : Cruch.find(member.church_id).name %></td>
+        <td><%= member.church_id==0 ? '-' : Chruch.find(member.church_id).name %></td>
         <td><%= link_to t('show'), member, :class=>'btn btn-default' %></td>
         <td><%= link_to t('edit'), edit_member_path(member), :class=>'btn btn-default' %></td>
         <td><%= link_to t('destroy'), member, :class=>'btn btn-default', method: :delete, data: { confirm: 'Are you sure?' } %></td>

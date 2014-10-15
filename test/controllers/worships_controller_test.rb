@@ -2,6 +2,7 @@ require 'test_helper'
 
 class WorshipsControllerTest < ActionController::TestCase
   setup do
+    sign_in :user, @user = users(:one)
     @worship = worships(:one)
   end
 

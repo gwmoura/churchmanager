@@ -2,6 +2,7 @@ require 'test_helper'
 
 class EverydayEventsControllerTest < ActionController::TestCase
   setup do
+    sign_in :user, @user = users(:one)
     @everyday_event = everyday_events(:one)
   end
 

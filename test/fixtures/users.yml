@@ -11,7 +11,7 @@ one:
 # column: value
 #
 two:
-  email: user1@site.dev
+  email: user2@site.dev
   #password: '123456'
   #password_confirmation: '123456'
 #  column: value

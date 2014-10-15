@@ -2,6 +2,7 @@ require 'test_helper'
 
 class CategoryEventsControllerTest < ActionController::TestCase
   setup do
+    sign_in :user, @user = users(:one)
     @category_event = category_events(:one)
   end
 

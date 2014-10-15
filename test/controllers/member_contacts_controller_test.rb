@@ -2,6 +2,7 @@ require 'test_helper'
 
 class MemberContactsControllerTest < ActionController::TestCase
   setup do
+    sign_in :user, @user = users(:one)
     @member_contact = member_contacts(:one)
   end
 
