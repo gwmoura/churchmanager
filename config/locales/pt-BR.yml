@@ -49,6 +49,13 @@ pt-BR:
 #churchs
   new_chruch: 'Nova Igreja'
   listing_chruches: 'Listando Igrejas'
+  neighborhood: 'Bairro'
+  city: 'Cidade'
+  state: 'Estado'
+  country: 'País'
+  zip_code: 'CEP'
+  phone: 'Telefone'
+  member_id: 'Pastor Resposável' 
 #departments
   department: 'departamento'
   departments: 'Departamentos'
