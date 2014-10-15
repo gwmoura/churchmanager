@@ -16,10 +16,12 @@ class ChruchesController < ApplicationController
   # GET /chruches/new
   def new
     @chruch = Chruch.new
+    @members = Member.where(:ministerial_role_id=>1)
   end
 
   # GET /chruches/1/edit
   def edit
+    @members = Member.where(:ministerial_role_id=>1)
   end
 
   # POST /chruches
