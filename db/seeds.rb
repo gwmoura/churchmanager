@@ -8,3 +8,4 @@
 #   
 
 User.create(email: 'admin@admin.com', password: 'adminadmin', password_confirmation: 'adminadmin')
+MinisterialRole.create(name: t('pastor'))
