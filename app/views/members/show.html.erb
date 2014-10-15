@@ -157,7 +157,7 @@
 
 <p>
   <strong>Church:</strong>
-  <%= @member.church_id %>
+  <%= member.church_id==0 ? '-' : Cruch.find(member.church_id).name %>
 </p>
 
 <%= link_to t('edit'), edit_member_path(@member), :class=>'btn btn-default' %>
