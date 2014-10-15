@@ -72,12 +72,12 @@
 
 <p>
   <strong>Marital status:</strong>
-  <%= @member.marital_status %>
+  <%= t(@member.marital_status_name) %>
 </p>
 
 <p>
   <strong>Congregating:</strong>
-  <%= @member.congregating %>
+  <%= @member.congregating==0 ? t('no') : t('yes') %>
 </p>
 
 <p>
@@ -107,7 +107,7 @@
 
 <p>
   <strong>Situation:</strong>
-  <%= @member.situation %>
+  <%= t(@member.situation_name) %>
 </p>
 
 <p>
