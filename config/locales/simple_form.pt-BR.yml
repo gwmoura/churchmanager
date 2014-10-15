@@ -50,6 +50,14 @@ pt-BR:
          member_id: 'Membro responsável'
        ministerial_role:
          name: 'Nome'
+       church:
+          neighborhood: 'Bairro'
+          city: 'Cidade'
+          state: 'Estado'
+          country: 'País'
+          zip_code: 'CEP'
+          phone: 'Telefone'
+          member_id: 'Pastor responsável'
        defaults:
          password: 'Password'
        user:
