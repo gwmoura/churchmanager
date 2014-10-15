@@ -15,4 +15,14 @@ class Member < ActiveRecord::Base
     end
   end
 
+  def situation_name
+    situations = {0=>'situation.new_decided', 1=>'situation.reconciliation', 2=>'situation.visiting', 3=>'situation.acclaim', 4=>'situation.inative' }
+    return situations[self.situation]
+  end
+
+  def marital_status_name
+    marital_status = {0=>'marital_status.single', 1=>'marital_status.maried', 2=>'marital_status.widowed' }
+    return marital_status[self.marital_status]
+  end
+
 end
