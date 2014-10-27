@@ -19,3 +19,5 @@
 /config/database.yml
 
 /coverage/
+/config/unicorn.rb
+/pids
