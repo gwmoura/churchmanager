@@ -26,7 +26,7 @@ $(function(){
   $("#member_name").keyup(function(){
     member_name = $("#member_name").val();
     //console.log(member_name,member_name.length);
-    if(member_name.length > 5){
+    if(member_name.length >= 5){
       $("#member-exists").html('<div class="alert alert-info"><div><b>Pesquisando por:</b></div>'+member_name+'</div>');
       $.get(
         '/members.json',
@@ -50,4 +50,31 @@ $(function(){
     }
     return false;
   });
+
+  $("#member_search").keyup(function(){
+    member_name = $("#member_search").val();
+    url = '/members';
+    if(member_name.length>=5){
+      url = '/members?name='+member_name;
+      $("#member_search_msg").html('<div class="alert alert-info">Procurando por: <b>'+member_name+'</b></div>');
+    }else if(member_name.length == 0){
+      $("#member_search_msg").html('');
+    }
+    if(member_name.length>=5 || member_name.length==0){
+      $.get(
+        url,
+        {},
+        function(data){
+          if(data.length > 0){
+            //console.log('result',data);
+            content = $(data).find("table");
+            $("table").html(content);
+            $("#member_search_msg").html('');
+          }
+        }
+      );
+    }
+  });
+
+
 });
