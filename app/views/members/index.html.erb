@@ -1,5 +1,7 @@
 <h1><%= t('listing_members') %></h1>
 
+<%= link_to t('new_member'), new_member_path, :class=>"btn btn-primary" %>
+<br/>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -31,7 +33,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to t('new_member'), new_member_path, :class=>"btn btn-primary" %>
