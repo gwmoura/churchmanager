@@ -1,7 +1,12 @@
 <h1><%= t('listing_members') %></h1>
 
 <%= link_to t('new_member'), new_member_path, :class=>"btn btn-primary" %>
-<br/>
+<hr/>
+<div class="input-group">
+  <input type="text" id="member_search" class="form-control">
+  <div class="input-group-addon"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></div>
+</div>
+<div id="member_search_msg"></div>
 <table class="table table-striped">
   <thead>
     <tr>
