@@ -21,7 +21,7 @@
   </div>
   <div class="form-group">
     <%= f.label :member_id %><br>
-    <%= f.select :member_id, @members.collect{ |m| [m.name,m.id]},{},{:class=>"form-control"} %>
+    <%= f.select :member_id, @members.collect{ |m| [m.name,m.id]},{:prompt=>"--"},{:class=>"form-control"} %>
   </div>
   <div class="actions">
     <%= f.button :submit %>
