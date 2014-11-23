@@ -12,6 +12,7 @@
       <th><%= t('country') %></th>
       <th><%= t('zip_code') %></th>
       <th><%= t('pastor') %></th>
+      <th><%= t('members') %></th>
       <th></th>
       <th></th>
       <th></th>
@@ -30,6 +31,7 @@
         <td><%= chruch.country %></td>
         <td><%= chruch.zip_code %></td>
         <td><%= chruch.member.name %></td>
+        <td><%= chruch.member %></td>
         <td><%= link_to t('show'), chruch %></td>
         <td><%= link_to t('edit'), edit_chruch_path(chruch) %></td>
         <td><%= link_to t('destroy'), chruch, method: :delete, data: { confirm: 'Are you sure?' } %></td>
