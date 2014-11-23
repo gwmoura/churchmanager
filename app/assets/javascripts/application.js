@@ -25,7 +25,8 @@ $(function(){
   $("#member_name").keyup(function(){
     member_name = $("#member_name").val();
     //console.log(member_name,member_name.length);
-    if(member_name.length > 10){
+    if(member_name.length > 5){
+      $("#member-exists").html('<div class="alert alert-info"><div><b>Pesquisando por:</b></div>'+member_name+'</div>');
       $.get(
         '/members.json',
         {name:member_name},
