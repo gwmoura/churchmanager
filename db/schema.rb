@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140730004810) do
+ActiveRecord::Schema.define(version: 20141205013126) do
 
   create_table "category_events", force: true do |t|
     t.string   "name"
@@ -41,8 +41,10 @@ ActiveRecord::Schema.define(version: 20140730004810) do
     t.integer  "member_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "chruch_id"
   end
 
+  add_index "departaments", ["chruch_id"], name: "index_departaments_on_chruch_id", using: :btree
   add_index "departaments", ["member_id"], name: "index_departaments_on_member_id", using: :btree
 
   create_table "everyday_events", force: true do |t|
@@ -159,8 +161,10 @@ ActiveRecord::Schema.define(version: 20140730004810) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "chruch_id"
   end
 
+  add_index "users", ["chruch_id"], name: "index_users_on_chruch_id", using: :btree
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["member_id"], name: "index_users_on_member_id", using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree

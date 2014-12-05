@@ -1,6 +1,10 @@
 Churchmanager::Application.routes.draw do
   devise_for :users
+
+  get "users" => "users#index"
+  
   get "home/index"
+
   resources :prayer_requests
 
   resources :category_events

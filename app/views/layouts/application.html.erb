@@ -27,6 +27,9 @@
           <li><%= link_to t('churchs'), chruches_path %></li>
           <li><%= link_to t('departments'), departaments_path %></li>
           <li><%= link_to t('ministerial_roles'), ministerial_roles_path %></li>
+          <% if current_user.chruch_id == nil %>
+          <li><%= link_to t('users'), '/users/' %></li>
+          <% end %>
         <% end %>
       </ul>
       <ul class="nav navbar-nav pull-right">
