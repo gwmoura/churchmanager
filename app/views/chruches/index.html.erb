@@ -31,7 +31,7 @@
         <td><%= chruch.country %></td>
         <td><%= chruch.zip_code %></td>
         <td><%= chruch.member.nil? ? '' : chruch.member.name %></td>
-        <td><%= chruch.member %></td>
+        <td><%= Member.where(:church_id=>chruch.id).count %></td>
         <td><%= link_to t('show'), chruch %></td>
         <td><%= link_to t('edit'), edit_chruch_path(chruch) %></td>
         <td><%= link_to t('destroy'), chruch, method: :delete, data: { confirm: 'Are you sure?' } %></td>
