@@ -1,4 +1,8 @@
-<h1><%= t('listing') %> <%=t('ministerial_roles') %></h1>
+<h1><%=t('ministerial_roles') %></h1>
+
+<%= link_to t('new')+' '+t('ministerial_role'), new_ministerial_role_path, :class=>"btn btn-primary" %>
+
+<br/>
 
 <table class="table table-striped">
   <thead>
@@ -21,7 +25,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to t('new')+' '+t('ministerial_role'), new_ministerial_role_path, :class=>"btn btn-primary" %>
