@@ -17,11 +17,13 @@ class DepartamentsController < ApplicationController
   def new
     @departament = Departament.new
     @members = Member.all
+    @chruchs = Chruch.all
   end
 
   # GET /departaments/1/edit
   def edit
     @members = Member.all
+    @chruchs = Chruch.all
   end
 
   # POST /departaments
@@ -72,6 +74,6 @@ class DepartamentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def departament_params
-      params.require(:departament).permit(:name, :description, :member_id)
+      params.require(:departament).permit(:name, :description, :member_id, :chruch_id)
     end
 end

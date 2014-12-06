@@ -8,8 +8,8 @@
   <% @users.each do |user| %>
     <tr>
       <td><%= user.email %></td>
-      <td><%= user.chruch_id == 0 ? user.chruch.name : '' %></td>
-      <td></td>
+      <td><%= user.chruch_id == nil ? '' : Chruch.find(user.chruch_id).name %></td>
+      <td><%= link_to t('destroy'), '/users/'+user.id.to_s, method: :delete, data: { confirm: 'you_sure?' } %></td>
       <td></td>
     </tr>
   <% end %>

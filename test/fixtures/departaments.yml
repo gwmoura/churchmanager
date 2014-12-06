@@ -3,9 +3,11 @@
 one:
   name: MyString
   description: MyText
-  member_id: 
+  member_id: 1
+  chruch_id: 1
 
 two:
   name: MyString
   description: MyText
   member_id: 
+  chruch_id: 

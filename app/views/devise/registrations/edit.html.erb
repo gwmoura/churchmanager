@@ -20,7 +20,7 @@
     <%= f.password_field :current_password, autocomplete: "off" %></div>
 
   <div><%= f.label :chruch %><br />
-    <%= f.select :chruch_id, Chruch.all.collect{ |c| [c.name, c.id]},{:prompt=>"--"},{:class=>"form-control"} %></div>
+    <%= f.select :chruch_id, Chruch.all.collect{ |c| [c.name, c.id]},{},{:class=>"form-control"} %></div>
 
   <div><%= f.submit "Update" %></div>
 <% end %>

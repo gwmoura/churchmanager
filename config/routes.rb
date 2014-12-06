@@ -1,7 +1,13 @@
 Churchmanager::Application.routes.draw do
   devise_for :users
 
-  get "users" => "users#index"
+  get "/users" => "users#index"
+  post "/users" => "users#add"
+  get "users/new" => 'users#new'
+
+  get 'users/:id' => 'users#show'
+
+  delete 'users/:id' => 'users#destroy'
   
   get "home/index"
 

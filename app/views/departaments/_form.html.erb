@@ -21,7 +21,11 @@
   </div>
   <div class="form-group">
     <%= f.label :member_id %><br>
-    <%= f.select :member_id, @members.collect{ |m| [m.name,m.id]},{:prompt=>"--"},{:class=>"form-control"} %>
+    <%= f.select :member_id, @members.collect{ |m| [m.name,m.id]},{:include_blank =>'--'},{:class=>"form-control"} %>
+  </div>
+  <div class="form-group">
+    <%= f.label :chruch_id, t(:church) %><br>
+    <%= f.select :chruch_id, @chruchs.collect{ |c| [c.name,c.id]},{:include_blank =>'--'},{:class=>"form-control"} %>
   </div>
   <div class="actions">
     <%= f.button :submit %>
