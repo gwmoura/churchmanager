@@ -5,7 +5,11 @@ class DepartamentsController < ApplicationController
   # GET /departaments
   # GET /departaments.json
   def index
-    @departaments = Departament.all
+    if current_user.chruch_id == nil
+      @departaments = Departament.all
+    else
+      @departaments = Departament.where(:chruch_id => current_user.chruch_id)
+    end
   end
 
   # GET /departaments/1
