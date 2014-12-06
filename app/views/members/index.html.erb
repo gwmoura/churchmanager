@@ -36,9 +36,8 @@
         <td><%= link_to t('destroy'), member, :class=>'btn btn-default', method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
+    <tr>
+      <td colspan="9"><%= paginate  @members %></td>
+    </tr>
   </tbody>
 </table>
-
-<br/>
-
-<%= paginate  @members %>
