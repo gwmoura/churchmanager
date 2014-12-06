@@ -1,4 +1,7 @@
-<h1><%= t('listing') %>  <%= t('departments') %></h1>
+<h1><%= t('departments') %></h1>
+
+<%= link_to t('new')+' '+t('department'), new_departament_path, :class=>"btn btn-primary" %>
+<br/>
 
 <table class="table table-striped">
   <thead>
@@ -25,7 +28,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to t('new')+' '+t('department'), new_departament_path, :class=>"btn btn-primary" %>
