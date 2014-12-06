@@ -5,7 +5,11 @@ class ChruchesController < ApplicationController
   # GET /chruches
   # GET /chruches.json
   def index
-    @chruches = Chruch.all
+    if current_user.chruch_id == nil
+      @chruches = Chruch.all
+    else
+      @chruches = Chruch.where(:id=>current_user.chruch_id)
+    end
   end
 
   # GET /chruches/1
