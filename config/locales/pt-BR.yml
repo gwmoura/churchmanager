@@ -63,3 +63,11 @@ pt-BR:
   ministerial_roles: 'Cargos Ministeriais'
   ministerial_role: 'Cargo Ministerial'
   pastor: 'Pastor'
+#kaminari
+  views:
+    pagination:
+      first: "« Primeira"
+      last: "Ultima »"
+      previous: "‹ Anterior"
+      next: "Proximo ›"
+      truncate: "…"

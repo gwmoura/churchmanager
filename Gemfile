@@ -41,6 +41,9 @@ gem 'country_select', github: 'stefanpenner/country_select'
 gem 'cocoon'
 gem 'coveralls', require: false
 
+gem 'kaminari'
+
+gem 'puma'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
@@ -52,5 +55,3 @@ gem 'coveralls', require: false
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
-gem 'puma'

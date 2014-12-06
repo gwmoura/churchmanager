@@ -7,6 +7,8 @@ class Member < ActiveRecord::Base
   accepts_nested_attributes_for :member_contacts, :allow_destroy => true
   validates_presence_of :church_id, :name
 
+  paginates_per 10
+
   def sex_name
     if self.sex == 1
       return 'male'
