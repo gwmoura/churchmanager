@@ -1,5 +1,8 @@
 <h1><%= t('listing_chruches') %></h1>
 
+<%= link_to t('new_chruch'), new_chruch_path, :class=>"btn btn-primary" %>
+<br/>
+
 <table class="table table-striped">
   <thead>
     <tr>
@@ -39,7 +42,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to t('new_chruch'), new_chruch_path, :class=>"btn btn-primary" %>
