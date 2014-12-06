@@ -12,9 +12,16 @@ Serving assets
 RAILS_ENV=production bundle exec rake assets:precompile
 
 
-Run unicorn
-===========
+Run puma Server
+===============
 
-unicorn_rails -c config/unicorn.rb -D -E production
+bundle exec puma -C config/puma.rb
+
+Puma as a service
+=================
+
+Read this [tools/jungle](https://github.com/puma/puma/tree/master/tools/jungle/) for configure init.d or upstart 
+
+
 
 

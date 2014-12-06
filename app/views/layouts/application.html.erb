@@ -28,7 +28,7 @@
           <li><%= link_to t('departments'), departaments_path %></li>
           <li><%= link_to t('ministerial_roles'), ministerial_roles_path %></li>
           <% if current_user.chruch_id == nil %>
-          <li><%= link_to t('users'), '/users/' %></li>
+          <li><%= link_to t('users'), '/users/'+current_user.chruch_id.to_s %></li>
           <% end %>
         <% end %>
       </ul>
