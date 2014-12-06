@@ -21,3 +21,5 @@
 /coverage/
 /config/unicorn.rb
 /pids
+
+public/assets/
