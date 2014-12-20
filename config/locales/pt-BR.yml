@@ -20,6 +20,16 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 pt-BR:
+  remember_me: 'Lembre-se de mim'
+  sign_in: 'Entrar'
+  email: 'E-mail'
+  password: 'Senha'
+  password_confirmation: 'Confirmação de Senha'
+  current_password: 'Senha atual'
+  unhappy: 'Infeliz'
+  cancel: 'Cancelar'
+  update: 'Atualizar'
+  account: 'Conta'
   show: 'Detalhes'
   destroy: 'Excluir'
   edit: 'Editar'

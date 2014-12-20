@@ -2,6 +2,8 @@
 
 en:
   devise:
+    leave_blank: "leave blank if you don't want to change it"
+    need_current_password: "we need your current password to confirm your changes"
     confirmations:
       confirmed: "Your account was successfully confirmed."
       send_instructions: "You will receive an email with instructions about how to confirm your account in a few minutes."

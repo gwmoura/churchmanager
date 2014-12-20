@@ -3,6 +3,8 @@
 
 pt-BR:
   devise:
+    leave_blank: "deixe em branco se você não quer mudá-lo"
+    need_current_password: "precismaos da sua senha atual para confirmar suas alterações"
     confirmations:
       confirmed: "Sua conta foi confirmada com sucesso."
       send_instructions: "Você receberá um email para confirmar sua conta em alguns minutis."
