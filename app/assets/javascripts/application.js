@@ -55,13 +55,13 @@ $(function(){
   $("#member_search").keyup(function(){
     member_name = $("#member_search").val();
     url = '/members';
-    if(member_name.length>=5){
+    if(member_name.length>=1){
       url = '/members?name='+member_name;
       $("#member_search_msg").html('<div class="alert alert-info">Procurando por: <b>'+member_name+'</b></div>');
     }else if(member_name.length == 0){
       $("#member_search_msg").html('');
     }
-    if(member_name.length>=5 || member_name.length==0){
+    if(member_name.length>=1 || member_name.length==0){
       $.get(
         url,
         {},
