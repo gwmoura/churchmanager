@@ -6,9 +6,19 @@ class MembersController < ApplicationController
   # GET /members.json
   def index
     if params[:name].nil?
-      @members = Member.where('church_id=0 OR church_id=?',current_user.chruch_id).order('name').page(params['page'])
+      if current_user.chruch_id == nil
+        @members = Member.order('name').page(params['page'])
+      else
+        @members = Member.where('church_id=0 OR church_id=?',current_user.chruch_id).order('name').page(params['page'])
+      end
+      
     else
-      @members = Member.where('name LIKE ? AND (church_id=0 OR church_id=?)',params[:name]+'%',current_user.chruch_id).page(params['page'])
+      if current_user.chruch_id == nil
+        @members = Member.where('name LIKE ?',params[:name]+'%').page(params['page'])
+      else
+        @members = Member.where('name LIKE ? AND (church_id=0 OR church_id=?)',params[:name]+'%',current_user.chruch_id).page(params['page'])
+      end
+      
     end
   end
 
