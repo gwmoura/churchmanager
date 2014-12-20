@@ -27,20 +27,21 @@ $(function(){
     member_name = $("#member_name").val();
     //console.log(member_name,member_name.length);
     if(member_name.length >= 5){
-      $("#member-exists").html('<div class="alert alert-info"><div><b>Pesquisando por:</b></div>'+member_name+'</div>');
+      $("#member-exists").html('<div class="alert alert-info"><b>Pesquisando por:</b> "'+member_name+'"</div>');
       $.get(
         '/members.json',
         {name:member_name},
         function(data){
           if(data.length > 0){
             //console.log('result',data);
-            content = '';
+            content = '<ul>';
             for(i=0;i<data.length;i++){
-              content+='<a href="/members/'+data[i].id+'/">'+data[i].name+'</a><br/>';  
+              content+='<li><a href="/members/'+data[i].id+'/">'+data[i].name+'</a></li>';  
             }
-            $("#member-exists").html('<div class="alert alert-warning"><div><b>Nomes já cadastrados:</b></div>'+content+'</div>');
+            content += '</ul>';
+            $("#member-exists").html('<div class="alert alert-warning"><div><b>Registros encontrados:</b></div>'+content+'</div>');
           }else{
-            //$("#member-exists").html('<div class="alert alert-info"><b>Não há duplicidade</b></div>');
+            $("#member-exists").html('<div class="alert alert-info"><b>Nenhum registro encontrado com o termo: </b>"'+member_name+'"</div>');
           }
         },
         "json"
