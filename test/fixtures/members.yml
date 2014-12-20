@@ -1,6 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  id: 1
   name: MyString
   birth_date: 2014-07-27
   sex: 1
@@ -27,7 +28,7 @@ one:
   education: MyString
   baptism_date: 2014-07-27
   wedding_date: 2014-07-27
-  ministerial_role_id: 
+  ministerial_role_id: 1 
   facebook: MyString
   twitter: MyString
   instagram: MyString
@@ -35,6 +36,7 @@ one:
   church_id: 0
 
 two:
+  id: 2
   name: MyString
   birth_date: 2014-07-27
   sex: 0
@@ -61,7 +63,7 @@ two:
   education: MyString
   baptism_date: 2014-07-27
   wedding_date: 2014-07-27
-  ministerial_role_id: 
+  ministerial_role_id: 1
   facebook: MyString
   twitter: MyString
   instagram: MyString
