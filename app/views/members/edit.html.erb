@@ -1,6 +1,6 @@
-<h1>Editing member</h1>
+<h1><%= t('editing')%> <%= @member.name %></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @member %> |
-<%= link_to 'Back', members_path %>
+<%= link_to 'Exibir', @member, :class=>'btn btn-default' %> |
+<%= link_to 'Voltar', members_path, :class=>'btn btn-default' %>
