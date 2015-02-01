@@ -1,4 +1,4 @@
-<%= simple_form_for(@member) do |f| %>
+<%= simple_form_for(@member,:html => {:multipart => true }) do |f| %>
   <% if @member.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@member.errors.count, "error") %> prohibited this member from being saved:</h2>
@@ -10,135 +10,136 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="form-group">
-    <%= f.label :name  %><br>
-    <%= f.text_field :name, :class=>"form-control" %>
-    <div id="member-exists"></div>
-  </div>
-  <div class="form-group">
-    <%= f.label :birth_date %><br>
-    <%= f.date_select :birth_date,{:start_year => Time.now.year - 100} %>
-  </div>
-  <div class="form-group">
-    <%= f.label :sex %><br>
-    <%= f.select :sex, {t('sex.female') => 0, t('sex.male') => 1 },{:prompt=>"--"},{:class=>"form-control"} %>
-  </div>
-  <div class="form-group">
-    <%= f.label :address %><br>
-    <%= f.text_field :address, :class=>"form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :neighborhood %><br>
-    <%= f.text_field :neighborhood, :class=>"form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :city %><br>
-    <%= f.text_field :city, :class=>"form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :state %><br>
-    <%= f.text_field :state, :class=>"form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :country %><br/>
-    <%= f.country_select :country,{priority_countries: ["BR"], prompt: :select_country},{:class=>"form-control"} %>
-  </div>
-  <div class="form-group">
-    <%= f.label :zip_code %><br>
-    <%= f.text_field :zip_code, :class=>"form-control zip-code" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :home_phone %><br>
-    <%= f.phone_field :home_phone, :class=>"form-control phone" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :mobile_phone %><br>
-    <%= f.phone_field :mobile_phone, :class=>"form-control phone" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :work_phone %><br>
-    <%= f.phone_field :work_phone, :class=>"form-control phone" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :email %><br>
-    <%= f.email_field :email, :class=>"form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :blood_type %><br>
-    <%= f.select :blood_type, ['A+','A-','AB+','AB-','B+','B-','O+','O-'],{:prompt=>"--"},{:class=>"form-control"} %>
-  </div>
-  <div class="form-group">
-    <%= f.label :marital_status %><br>
-    <%= f.select :marital_status, {t('marital_status.single') => 0, t('marital_status.maried') => 1, t('marital_status.widowed') =>2 },{},{:class=>"form-control"} %>
-  </div>
-  <div class="form-group">
-    <%= f.label :congregating %><br>
-    <%= f.select :congregating, {t('yes') => 1, t('no') => 0},{},{:class=>"form-control"} %>
-  </div>
-  <div class="form-group">
-    <%= f.label :photo %><br>
-    <%= f.file_field :photo %>
-  </div>
-  <div class="form-group">
-    <%= f.label :withdrawl_date %><br>
-    <%= f.date_select :withdrawl_date, {:start_year => Time.now.year - 100} %>
-  </div>
-  <div class="form-group">
-    <%= f.label :departament_id %><br>
-    <%= f.select :departament_id, @departaments.collect { |c| [c.name,c.id] },{:include_blank =>'--', :prompt=>"--"},{:class=>"form-control"} %>
-  </div>
-  <div class="form-group">
-    <%= f.label :skills %><br>
-    <%= f.text_field :skills, :placeholder =>  t('skills_examples'),:class=>"form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :worship_date %><br>
-    <%= f.date_select :worship_date %>
-  </div>
-  <div class="form-group">
-    <%= f.label :situation %><br>
-    <%= f.select :situation,{t('situation.new_decided') => 0, t('situation.reconciliation') => 1,t('situation.member') => 2, t('situation.acclaim') => 3, t('situation.inative') => 4 },{},{:class=>"form-control"} %>
-  </div>
-  <div class="form-group">
-    <%= f.label :profession %><br>
-    <%= f.text_field :profession,:class=>"form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :education %><br>
-    <%= f.text_field :education,:class=>"form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :baptism_date %><br>
-    <%= f.date_select :baptism_date %>
-  </div>
-  <div class="form-group">
-    <%= f.label :wedding_date %><br>
-    <%= f.date_select :wedding_date %>
-  </div>
-  <div class="form-group">
-    <%= f.label :ministerial_role_id %><br>
-    <%= f.select :ministerial_role_id, @ministerial_roles.collect { |mr| [mr.name,mr.id] }, {:prompt=>"--",:include_blank =>'--'}, {:class=>"form-control"} %>
-  </div>
-  <div class="form-group">
-    <%= f.label :facebook %><br>
-    <%= f.text_field :facebook,:class=>"form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :twitter %><br>
-    <%= f.text_field :twitter,:class=>"form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :instagram %><br>
-    <%= f.text_field :instagram,:class=>"form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :whatsapp %><br>
-    <%= f.text_field :whatsapp,:class=>"form-control phone" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :church_id %><br>
-    <%= f.select :church_id, @churchs.collect { |c| [c.name,c.id] },{},{:class=>"form-control"} %>
+  <div id="member-form" class="col-md-12">
+    <div class="form-group col-md-12">
+      <%= f.label :name  %><br>
+      <%= f.text_field :name, :class=>"form-control" %>
+      <div id="member-exists"></div>
+    </div>
+    <div class="form-group col-md-4">
+      <%= f.label :photo %><br>
+      <%= f.file_field :photo %>
+    </div>
+    <div class="form-group col-md-4">
+      <%= f.label :birth_date %><br>
+      <%= f.date_select :birth_date,{:start_year => Time.now.year - 100} %>
+    </div>
+    <div class="form-group col-md-4">
+      <%= f.label :sex %><br>
+      <%= f.select :sex, {t('sex.female') => 0, t('sex.male') => 1 },{:prompt=>"--"},{:class=>"form-control"} %>
+    </div>
+    <div class="form-group col-md-10">
+      <%= f.label :address %><br>
+      <%= f.text_field :address, :class=>"form-control" %>
+    </div>
+    <div class="form-group col-md-2">
+      <%= f.label :neighborhood %><br>
+      <%= f.text_field :neighborhood, :class=>"form-control" %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= f.label :city %><br>
+      <%= f.text_field :city, :class=>"form-control" %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= f.label :state %><br>
+      <%= f.text_field :state, :class=>"form-control" %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= f.label :country %><br/>
+      <%= f.country_select :country,{priority_countries: ["BR"], prompt: :select_country},{:class=>"form-control"} %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= f.label :zip_code %><br>
+      <%= f.text_field :zip_code, :class=>"form-control zip-code" %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= f.label :home_phone %><br>
+      <%= f.phone_field :home_phone, :class=>"form-control phone" %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= f.label :mobile_phone %><br>
+      <%= f.phone_field :mobile_phone, :class=>"form-control phone" %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= f.label :work_phone %><br>
+      <%= f.phone_field :work_phone, :class=>"form-control phone" %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= f.label :email %><br>
+      <%= f.email_field :email, :class=>"form-control" %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= f.label :blood_type %><br>
+      <%= f.select :blood_type, ['A+','A-','AB+','AB-','B+','B-','O+','O-'],{:prompt=>"--"},{:class=>"form-control"} %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= f.label :marital_status %><br>
+      <%= f.select :marital_status, {t('marital_status.single') => 0, t('marital_status.maried') => 1, t('marital_status.widowed') =>2 },{},{:class=>"form-control"} %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= f.label :education %><br>
+      <%= f.text_field :education,:class=>"form-control" %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= f.label :profession %><br>
+      <%= f.text_field :profession,:class=>"form-control" %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= f.label :wedding_date %><br>
+      <%= f.date_select :wedding_date %>
+    </div>
+    <div class="form-group col-md-9">
+      <%= f.label :skills %><br>
+      <%= f.text_field :skills, :placeholder =>  t('skills_examples'),:class=>"form-control" %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= f.label :facebook %><br>
+      <%= f.text_field :facebook,:class=>"form-control" %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= f.label :twitter %><br>
+      <%= f.text_field :twitter,:class=>"form-control" %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= f.label :instagram %><br>
+      <%= f.text_field :instagram,:class=>"form-control" %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= f.label :whatsapp %><br>
+      <%= f.text_field :whatsapp,:class=>"form-control phone" %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= f.label :congregating %><br>
+      <%= f.select :congregating, {t('yes') => 1, t('no') => 0},{},{:class=>"form-control"} %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= f.label :baptism_date %><br>
+      <%= f.date_select :baptism_date %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= f.label :departament_id %><br>
+      <%= f.select :departament_id, @departaments.collect { |c| [c.name,c.id] },{:include_blank =>'--'},{:class=>"form-control"} %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= f.label :situation %><br>
+      <%= f.select :situation,{t('situation.new_decided') => 0, t('situation.reconciliation') => 1,t('situation.member') => 2, t('situation.acclaim') => 3, t('situation.inative') => 4 },{},{:class=>"form-control"} %>
+    </div>
+    <div class="form-group col-md-4">
+      <%= f.label :worship_date %><br>
+      <%= f.date_select :worship_date %>
+    </div>
+    <div class="form-group col-md-4">
+      <%= f.label :ministerial_role_id %><br>
+      <%= f.select :ministerial_role_id, @ministerial_roles.collect { |mr| [mr.name,mr.id] }, {:prompt=>"--",:include_blank =>'--'}, {:class=>"form-control"} %>
+    </div>
+    <div class="form-group col-md-4">
+      <%= f.label :withdrawl_date %><br>
+      <%= f.date_select :withdrawl_date, {:start_year => Time.now.year - 100} %>
+    </div>
+    <div class="form-group col-md-12">
+      <%= f.label :church_id %><br>
+      <%= f.select :church_id, @churchs.collect { |c| [c.name,c.id] },{},{:class=>"form-control"} %>
+    </div>
   </div>
   <h3><%= t('contacts') %></h3>
   <div id="member_contacts">
@@ -147,8 +148,8 @@
     <% end %>
     <%= link_to_add_association t('add')+' '+t('contact'), f, :member_contacts, :class => 'btn btn-default'  %>
   </div>
+  <hr/>
   <div class="actions">
-    <br/>
     <%= f.button :submit %>
   </div>
 <% end %>
