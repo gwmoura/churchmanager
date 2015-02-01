@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Photo:</strong>
+  <%= image_tag @member.photo.url(:medium) %>
+</p>
+
+<p>
   <strong>Name:</strong>
   <%= @member.name %>
 </p>
@@ -81,11 +86,6 @@
 </p>
 
 <p>
-  <strong>Photo:</strong>
-  <%= @member.photo %>
-</p>
-
-<p>
   <strong>Withdrawl date:</strong>
   <%= @member.withdrawl_date %>
 </p>
@@ -132,7 +132,7 @@
 
 <p>
   <strong>Ministerial role:</strong>
-  <%= @member.ministerial_role.name %>
+  <%= @member.ministerial_role.nil? ? '-' : @member.ministerial_role.name %>
 </p>
 
 <p>
