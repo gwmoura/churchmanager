@@ -33,6 +33,7 @@ pt-BR:
   show: 'Detalhes'
   destroy: 'Excluir'
   edit: 'Editar'
+  editing: 'Editando'
   back: 'Voltar'
   members: 'Membros'
   churchs: 'Igrejas'
