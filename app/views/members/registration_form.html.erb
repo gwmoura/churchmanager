@@ -1,0 +1,164 @@
+<h1><%= t('registration_form') %></h1>
+<button class="btn" id="print-regsitration-form"><%= t('print') %></button>
+<hr/>
+<div id="member-form" class="col-md-12 col-xs-12">
+  <div class="form-group col-md-12 col-xs-12">
+    <%= label_tag :name, t(:name)  %><br>
+    <%= text_field_tag :name, nil, class:"form-control" %>
+    <div id="member-exists"></div>
+  </div>
+  <div class="form-group col-md-4 col-xs-4">
+    <%= label_tag :birth_date, t('simple_form.labels.member.birth_date') %><br>
+    <%= text_field_tag :birth_date,nil, class: "form-control" %>
+  </div>
+  <div class="form-group col-md-4 col-xs-4">
+    <%= label_tag :sex, t('simple_form.labels.member.sex') %><br>
+    <%= check_box_tag t('sex.female'), nil, false %> <%= t('sex.female') %>
+    <%= check_box_tag t('sex.male'),nil, false %> <%= t('sex.male') %>
+  </div>
+  <div class="form-group col-md-10 col-xs-10">
+    <%= label_tag :address, t('simple_form.labels.member.address') %><br>
+    <%= text_field_tag :address, nil, class: "form-control" %>
+  </div>
+  <div class="form-group col-md-2 col-xs-2">
+    <%= label_tag :neighborhood, t('simple_form.labels.member.neighborhood') %><br>
+    <%= text_field_tag :neighborhood, nil, class: "form-control" %>
+  </div>
+  <div class="form-group col-md-3 col-xs-3">
+    <%= label_tag :city, t('simple_form.labels.member.city') %><br>
+    <%= text_field_tag :city, nil, class: "form-control" %>
+  </div>
+  <div class="form-group col-md-3 col-xs-3">
+    <%= label_tag :state, t('simple_form.labels.member.state') %><br>
+    <%= text_field_tag :state, nil, class: "form-control" %>
+  </div>
+  <div class="form-group col-md-3 col-xs-3">
+    <%= label_tag :country, t('simple_form.labels.member.country') %><br/>
+    <%= text_field_tag :country,nil, class: "form-control" %>
+  </div>
+  <div class="form-group col-md-3 col-xs-3">
+    <%= label_tag :zip_code, t('simple_form.labels.member.zip_code') %><br>
+    <%= text_field_tag :zip_code, nil, class: "form-control zip-code" %>
+  </div>
+  <div class="form-group col-md-3 col-xs-3">
+    <%= label_tag :home_phone, t('simple_form.labels.member.home_phone') %><br>
+    <%= text_field_tag :home_phone, nil, class: "form-control phone" %>
+  </div>
+  <div class="form-group col-md-3 col-xs-3">
+    <%= label_tag :mobile_phone, t('simple_form.labels.member.mobile_phone') %><br>
+    <%= text_field_tag :mobile_phone, nil, class: "form-control phone" %>
+  </div>
+  <div class="form-group col-md-3 col-xs-3">
+    <%= label_tag :work_phone, t('simple_form.labels.member.work_phone') %><br>
+    <%= text_field_tag :work_phone, nil, class: "form-control phone" %>
+  </div>
+  <div class="form-group col-md-3 col-xs-3">
+    <%= label_tag :email, t('simple_form.labels.member.email') %><br>
+    <%= text_field_tag :email, nil, class: "form-control" %>
+  </div>
+  <div class="form-group col-md-3 col-xs-3">
+    <%= label_tag :blood_type, t('simple_form.labels.member.blood_type') %><br>
+    <%= text_field_tag :blood_type,nil, class: "form-control" %>
+  </div>
+  <div class="form-group col-md-3 col-xs-3">
+    <%= label_tag :marital_status, t('simple_form.labels.member.marital_status') %><br>
+    <%= check_box_tag t('marital_status.single'),nil,false %> <%= t('marital_status.single') %>
+    <%= check_box_tag t('marital_status.maried'),nil,false %> <%= t('marital_status.maried') %>
+    <%= check_box_tag t('marital_status.widowed'),nil,false %> <%= t('marital_status.widowed') %>
+  </div>
+  <div class="form-group col-md-3 col-xs-3">
+    <%= label_tag :education, t('simple_form.labels.member.education') %><br>
+    <%= text_field_tag :education,nil, class: "form-control" %>
+  </div>
+  <div class="form-group col-md-3 col-xs-3">
+    <%= label_tag :profession, t('simple_form.labels.member.profession') %><br>
+    <%= text_field_tag :profession,nil, class: "form-control" %>
+  </div>
+  <div class="form-group col-md-3 col-xs-3">
+    <%= label_tag :wedding_date, t('simple_form.labels.member.wedding_date') %><br>
+    <%= text_field_tag :wedding_date, nil, class: "form-control" %>
+  </div>
+  <div class="form-group col-md-9 col-xs-9">
+    <%= label_tag :skills, t('simple_form.labels.member.skills') %><br>
+    <%= text_field_tag :skills, nil, placeholder: t('skills_examples'), class: "form-control" %>
+  </div>
+  <div class="form-group col-md-3 col-xs-3">
+    <%= label_tag :facebook %><br>
+    <%= text_field_tag :facebook,nil, class: "form-control" %>
+  </div>
+  <div class="form-group col-md-3 col-xs-3">
+    <%= label_tag :twitter %><br>
+    <%= text_field_tag :twitter,nil, class: "form-control" %>
+  </div>
+  <div class="form-group col-md-3 col-xs-3">
+    <%= label_tag :instagram %><br>
+    <%= text_field_tag :instagram,nil, class: "form-control" %>
+  </div>
+  <div class="form-group col-md-3 col-xs-3">
+    <%= label_tag :whatsapp %><br>
+    <%= text_field_tag :whatsapp,nil, class: "form-control phone" %>
+  </div>
+  <div class="form-group col-md-3 col-xs-3">
+    <%= label_tag :congregating, t('simple_form.labels.member.congregating') %><br>
+    <%= check_box_tag :yes,nil,false %> <%= t('yes') %><br/>
+    <%= check_box_tag :no,nil,false %> <%= t('no') %>
+  </div>
+  <div class="form-group col-md-3 col-xs-3">
+    <%= label_tag :baptism_date, t('simple_form.labels.member.baptism_date') %><br>
+    <%= text_field_tag :baptism_date, nil, class: "form-control" %>
+  </div>
+  <div class="form-group col-md-3 col-xs-3">
+    <%= label_tag :departament_id, t('simple_form.labels.member.department') %><br>
+    <%= text_field_tag :departament_id,nil, class: "form-control" %>
+  </div>
+  <div class="form-group col-md-3 col-xs-3">
+    <%= label_tag :situation, t('simple_form.labels.member.situation') %><br>
+    <%= check_box_tag t('situation.new_decided'), nil, false %> <%= t('situation.new_decided') %>
+    <%= check_box_tag t('situation.reconciliation'), nil, false %> <%= t('situation.reconciliation') %><br/>
+    <%= check_box_tag t('situation.member'), nil, false %> <%= t('situation.member') %>
+    <%= check_box_tag t('situation.acclaim'), nil, false %> <%= t('situation.acclaim') %>
+    <%= check_box_tag t('situation.inative'), nil, false %> <%= t('situation.inative') %>
+  </div>
+  <div class="form-group col-md-4 col-xs-4">
+    <%= label_tag :worship_date, t('simple_form.labels.member.worship_date') %><br>
+    <%= text_field_tag :worship_date, nil, class: "form-control" %>
+  </div>
+  <!--<div class="form-group col-md-4 col-xs-4 ">
+    <%= label_tag :ministerial_role_id, t('simple_form.labels.member.ministerial_role') %><br>
+    <% @ministerial_roles.each do |mr| %>
+    <%= mr.name %> <%= check_box_tag mr.name, nil, false %>
+    <% end %>
+  </div>-->
+  <div class="form-group col-md-4 col-xs-4">
+    <%= label_tag :withdrawl_date, t('simple_form.labels.member.withdrawl_date') %><br>
+    <%= text_field_tag :withdrawl_date,nil, class: "form-control" %>
+  </div>
+  <!--<div class="form-group col-md-12">
+    <%= label_tag :church_id %><br>
+    <% @churchs.each do |church| %>
+    <%= check_box_tag church.name, nil, false %>
+    <% end %>
+  </div>-->
+</div>
+<h3><%= t('contacts') %></h3>
+<div id="member_contacts">
+  <% (1..5).each do |i| %>
+    <div class="contact-member-form col-md-12 col-xs-12">
+      <div class="form_group col-md-3 col-xs-3">
+        <%= label_tag :contact_name, t('simple_form.labels.member_contacts.contact_name') %><br>
+        <%= text_field_tag :contact_name,nil, class: "form-control" %>
+      </div>
+      <div class="form_group col-md-3 col-xs-3">
+        <%= label_tag :contact_number, t('simple_form.labels.member_contacts.contact_number') %><br>
+        <%= text_field_tag :contact_number,nil, class: "form-control phone" %>
+      </div>
+      <div class="form_group col-md-3 col-xs-3">
+        <%= label_tag :degree_kinship, t('simple_form.labels.member_contacts.degree_kinship') %><br>
+        <%= text_field_tag :degree_kinship,nil, class: "form-control" %>
+      </div>
+    </div>
+    <br/>
+    <br/>
+    <hr/>
+  <% end %>
+</div>

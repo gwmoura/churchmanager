@@ -77,5 +77,13 @@ $(function(){
     }
   });
 
+  $("#print-regsitration-form").click(function(){
+    $(".navbar").hide();
+    $("#print-regsitration-form").hide();
+    window.print();
+    $(".navbar").show();
+    $("#print-regsitration-form").show();
+  });
+
 
 });

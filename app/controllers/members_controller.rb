@@ -82,6 +82,13 @@ class MembersController < ApplicationController
     end
   end
 
+  # GET /members/registration-form
+  def registration_form
+    @departaments = Departament.all
+    @ministerial_roles = MinisterialRole.all
+    @churchs = Chruch.all
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_member

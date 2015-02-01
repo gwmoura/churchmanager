@@ -21,10 +21,12 @@
 
 pt-BR:
   remember_me: 'Lembre-se de mim'
+  registration_form: 'Ficha de Cadastro'
   sign_in: 'Entrar'
   email: 'E-mail'
   password: 'Senha'
   password_confirmation: 'Confirmação de Senha'
+  print: 'Imprimir'
   current_password: 'Senha atual'
   unhappy: 'Infeliz'
   cancel: 'Cancelar'

@@ -11,6 +11,8 @@ Churchmanager::Application.routes.draw do
   
   get "home/index"
 
+  get "members/registration-form" => 'members#registration_form'
+
   resources :prayer_requests
 
   resources :category_events
