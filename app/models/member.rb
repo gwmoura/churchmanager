@@ -9,6 +9,9 @@ class Member < ActiveRecord::Base
 
   paginates_per 10
 
+  has_attached_file :photo, :styles => { :medium => "300x300>", :thumb => "100x100>" }
+  validates_attachment_content_type :photo, :content_type => /\Aimage\/.*\Z/
+
   def sex_name
     if self.sex == 1
       return 'male'
