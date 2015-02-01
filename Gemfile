@@ -43,7 +43,11 @@ gem 'coveralls', require: false
 
 gem 'kaminari'
 
+gem 'paperclip', '~> 4.2'
+
+# Use puma as the app server
 gem 'puma'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
