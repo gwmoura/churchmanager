@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141205013126) do
+ActiveRecord::Schema.define(version: 20150201130030) do
 
   create_table "category_events", force: true do |t|
     t.string   "name"
@@ -105,6 +105,10 @@ ActiveRecord::Schema.define(version: 20141205013126) do
     t.integer  "church_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
   add_index "members", ["church_id"], name: "index_members_on_church_id", using: :btree
