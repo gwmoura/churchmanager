@@ -18,7 +18,7 @@ one:
   blood_type: MyString
   marital_status: 1 
   congregating: 0 
-  photo: MyString
+  photo: ''
   withdrawl_date: 2014-07-27
   departament_id: 0
   skills: MyString
@@ -53,7 +53,7 @@ two:
   blood_type: MyString
   marital_status: 1 
   congregating: 1
-  photo: MyString
+  photo: ''
   withdrawl_date: 2014-07-27
   departament_id: 1
   skills: MyString
