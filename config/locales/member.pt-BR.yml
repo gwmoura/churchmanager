@@ -10,6 +10,8 @@ pt-BR:
     single: "Solteiro"
     maried: "Casado"
     widowed: "Viúvo"
+    stable_union: "União Estável"
+    living_together: "Morando Junto"
   skills_examples: "encanador, cantor, artista plástico, cozinheira"
   situation:
     new_decided: "Novo Decidido"
@@ -18,3 +20,5 @@ pt-BR:
     member: "Membro"
     acclaim: "Aclamação"
     inative: "Inativo"
+    baptism: "Batismo"
+    discipleship: "Discipulado"
