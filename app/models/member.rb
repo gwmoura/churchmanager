@@ -21,12 +21,12 @@ class Member < ActiveRecord::Base
   end
 
   def situation_name
-    situations = {0=>'situation.new_decided', 1=>'situation.reconciliation', 2=>'situation.visiting', 3=>'situation.acclaim', 4=>'situation.inative' }
+    situations = {0=>'situation.new_decided', 1=>'situation.reconciliation', 2=>'situation.visiting', 3=>'situation.acclaim', 4=>'situation.inative', 5=>'situation.discipleship',6=>'situation.baptism' }
     return situations[self.situation]
   end
 
   def marital_status_name
-    marital_status = {0=>'marital_status.single', 1=>'marital_status.maried', 2=>'marital_status.widowed' }
+    marital_status = {0=>'marital_status.single', 1=>'marital_status.maried', 2=>'marital_status.widowed', 3=>'marital_status.stable_union', 4=>'marital_status.living_together' }
     return marital_status[self.marital_status]
   end
 
