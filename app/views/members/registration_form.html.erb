@@ -1,7 +1,14 @@
 <h1><%= t('registration_form') %></h1>
 <button class="btn" id="print-regsitration-form"><%= t('print') %></button>
 <hr/>
+<div>
+  
+</div>
 <div id="member-form" class="col-md-12 col-xs-12">
+  <div class="form-group col-md-3 col-xs-3">
+    <%= label_tag :worship_date, t('simple_form.labels.member.worship_date') %><br>
+    <%= text_field_tag :worship_date, nil, class: "form-control" %>
+  </div>
   <div class="form-group col-md-12 col-xs-12">
     <%= label_tag :name, t(:name)  %><br>
     <%= text_field_tag :name, nil, class:"form-control" %>
@@ -16,10 +23,22 @@
     <%= check_box_tag t('sex.female'), nil, false %> <%= t('sex.female') %>
     <%= check_box_tag t('sex.male'),nil, false %> <%= t('sex.male') %>
   </div>
-  <div class="form-group col-md-10 col-xs-10">
+  <div class="form-group col-md-3 col-xs-3">
+    <%= label_tag :marital_status, t('simple_form.labels.member.marital_status') %><br>
+    <%= check_box_tag t('marital_status.single'),nil,false %><%= t('marital_status.single') %>
+    <%= check_box_tag t('marital_status.maried'),nil,false %><%= t('marital_status.maried') %>
+    <%= check_box_tag t('marital_status.widowed'),nil,false %><%= t('marital_status.widowed') %>
+    <%= check_box_tag t('marital_status.stable_union'),nil,false %><%= t('marital_status.stable_union') %>
+    <%= check_box_tag t('marital_status.living_together'),nil,false %><%= t('marital_status.living_together') %>
+  </div>
+  <div class="form-group col-md-8 col-xs-8">
     <%= label_tag :address, t('simple_form.labels.member.address') %><br>
     <%= text_field_tag :address, nil, class: "form-control" %>
   </div>
+  <div class="form-group col-md-2 col-xs-2">
+      <%= label_tag :complement, t('simple_form.labels.member.complement') %><br>
+      <%= text_field_tag :complement, nil, class: "form-control" %>
+    </div>
   <div class="form-group col-md-2 col-xs-2">
     <%= label_tag :neighborhood, t('simple_form.labels.member.neighborhood') %><br>
     <%= text_field_tag :neighborhood, nil, class: "form-control" %>
@@ -56,21 +75,15 @@
     <%= label_tag :email, t('simple_form.labels.member.email') %><br>
     <%= text_field_tag :email, nil, class: "form-control" %>
   </div>
-  <div class="form-group col-md-3 col-xs-3">
+  <div class="form-group col-md-2 col-xs-2">
     <%= label_tag :blood_type, t('simple_form.labels.member.blood_type') %><br>
     <%= text_field_tag :blood_type,nil, class: "form-control" %>
-  </div>
-  <div class="form-group col-md-3 col-xs-3">
-    <%= label_tag :marital_status, t('simple_form.labels.member.marital_status') %><br>
-    <%= check_box_tag t('marital_status.single'),nil,false %> <%= t('marital_status.single') %>
-    <%= check_box_tag t('marital_status.maried'),nil,false %> <%= t('marital_status.maried') %>
-    <%= check_box_tag t('marital_status.widowed'),nil,false %> <%= t('marital_status.widowed') %>
   </div>
   <div class="form-group col-md-3 col-xs-3">
     <%= label_tag :education, t('simple_form.labels.member.education') %><br>
     <%= text_field_tag :education,nil, class: "form-control" %>
   </div>
-  <div class="form-group col-md-3 col-xs-3">
+  <div class="form-group col-md-4 col-xs-4">
     <%= label_tag :profession, t('simple_form.labels.member.profession') %><br>
     <%= text_field_tag :profession,nil, class: "form-control" %>
   </div>
@@ -80,7 +93,7 @@
   </div>
   <div class="form-group col-md-9 col-xs-9">
     <%= label_tag :skills, t('simple_form.labels.member.skills') %><br>
-    <%= text_field_tag :skills, nil, placeholder: t('skills_examples'), class: "form-control" %>
+    <%= text_field_tag :skills, nil, class: "form-control" %>
   </div>
   <div class="form-group col-md-3 col-xs-3">
     <%= label_tag :facebook %><br>
@@ -117,11 +130,8 @@
     <%= check_box_tag t('situation.reconciliation'), nil, false %> <%= t('situation.reconciliation') %><br/>
     <%= check_box_tag t('situation.member'), nil, false %> <%= t('situation.member') %>
     <%= check_box_tag t('situation.acclaim'), nil, false %> <%= t('situation.acclaim') %>
-    <%= check_box_tag t('situation.inative'), nil, false %> <%= t('situation.inative') %>
-  </div>
-  <div class="form-group col-md-4 col-xs-4">
-    <%= label_tag :worship_date, t('simple_form.labels.member.worship_date') %><br>
-    <%= text_field_tag :worship_date, nil, class: "form-control" %>
+    <%= check_box_tag t('situation.discipleship'), nil, false %> <%= t('situation.discipleship') %>
+    <%= check_box_tag t('situation.baptism'), nil, false %> <%= t('situation.baptism') %>
   </div>
   <!--<div class="form-group col-md-4 col-xs-4 ">
     <%= label_tag :ministerial_role_id, t('simple_form.labels.member.ministerial_role') %><br>
@@ -129,10 +139,6 @@
     <%= mr.name %> <%= check_box_tag mr.name, nil, false %>
     <% end %>
   </div>-->
-  <div class="form-group col-md-4 col-xs-4">
-    <%= label_tag :withdrawl_date, t('simple_form.labels.member.withdrawl_date') %><br>
-    <%= text_field_tag :withdrawl_date,nil, class: "form-control" %>
-  </div>
   <!--<div class="form-group col-md-12">
     <%= label_tag :church_id %><br>
     <% @churchs.each do |church| %>
@@ -142,7 +148,28 @@
 </div>
 <h3><%= t('contacts') %></h3>
 <div id="member_contacts">
-  <% (1..5).each do |i| %>
+    <div class="contact-member-form col-md-12 col-xs-12">
+      <div class="form_group col-md-3 col-xs-3">
+        <%= label_tag :contact_name, 'Pai' %><br>
+        <%= text_field_tag :contact_name,nil, class: "form-control" %>
+      </div>
+      <div class="form_group col-md-3 col-xs-3">
+        <%= label_tag :contact_number, t('simple_form.labels.member_contacts.contact_number') %><br>
+        <%= text_field_tag :contact_number,nil, class: "form-control phone" %>
+      </div>
+    </div>
+
+    <div class="contact-member-form col-md-12 col-xs-12">
+      <div class="form_group col-md-3 col-xs-3">
+        <%= label_tag :contact_name, 'Mãe' %><br>
+        <%= text_field_tag :contact_name,nil, class: "form-control" %>
+      </div>
+      <div class="form_group col-md-3 col-xs-3">
+        <%= label_tag :contact_number, t('simple_form.labels.member_contacts.contact_number') %><br>
+        <%= text_field_tag :contact_number,nil, class: "form-control phone" %>
+      </div>
+    </div>
+
     <div class="contact-member-form col-md-12 col-xs-12">
       <div class="form_group col-md-3 col-xs-3">
         <%= label_tag :contact_name, t('simple_form.labels.member_contacts.contact_name') %><br>
@@ -160,5 +187,4 @@
     <br/>
     <br/>
     <hr/>
-  <% end %>
 </div>
