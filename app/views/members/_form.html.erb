@@ -28,9 +28,13 @@
       <%= f.label :sex %><br>
       <%= f.select :sex, {t('sex.female') => 0, t('sex.male') => 1 },{:prompt=>"--"},{:class=>"form-control"} %>
     </div>
-    <div class="form-group col-md-10">
+    <div class="form-group col-md-8">
       <%= f.label :address %><br>
       <%= f.text_field :address, :class=>"form-control" %>
+    </div>
+    <div class="form-group col-md-2">
+      <%= f.label :complement %><br>
+      <%= f.text_field :complement, :class=>"form-control" %>
     </div>
     <div class="form-group col-md-2">
       <%= f.label :neighborhood %><br>
@@ -74,7 +78,7 @@
     </div>
     <div class="form-group col-md-3">
       <%= f.label :marital_status %><br>
-      <%= f.select :marital_status, {t('marital_status.single') => 0, t('marital_status.maried') => 1, t('marital_status.widowed') =>2 },{},{:class=>"form-control"} %>
+      <%= f.select :marital_status, {t('marital_status.single') => 0, t('marital_status.maried') => 1, t('marital_status.widowed') =>2, t('marital_status.stable_union')=>3, t('marital_status.living_together')=>4 },{},{:class=>"form-control"} %>
     </div>
     <div class="form-group col-md-3">
       <%= f.label :education %><br>
@@ -122,7 +126,7 @@
     </div>
     <div class="form-group col-md-3">
       <%= f.label :situation %><br>
-      <%= f.select :situation,{t('situation.new_decided') => 0, t('situation.reconciliation') => 1,t('situation.member') => 2, t('situation.acclaim') => 3, t('situation.inative') => 4 },{},{:class=>"form-control"} %>
+      <%= f.select :situation,{t('situation.new_decided') => 0, t('situation.reconciliation') => 1,t('situation.member') => 2, t('situation.acclaim') => 3, t('situation.inative') => 4, t('situation.discipleship') => 5, t('situation.baptism') => 6 },{},{:class=>"form-control"} %>
     </div>
     <div class="form-group col-md-4">
       <%= f.label :worship_date %><br>
